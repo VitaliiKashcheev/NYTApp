@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DetailScreen" representedClassName="DetailScreen" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownersAbbrev" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownersName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spacestationImage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="detail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MainScreen" inverseName="main" inverseEntity="MainScreen" syncable="YES"/>
+    </entity>
+    <entity name="MainScreen" representedClassName="MainScreen" syncable="YES" codeGenerationType="class">
+        <attribute name="describeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameLabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pictureName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="main" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailScreen" inverseName="detail" inverseEntity="DetailScreen" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DetailScreen" positionX="206.91796875" positionY="43.98046875" width="128" height="135"/>
+        <element name="MainScreen" positionX="-108.78125" positionY="-95.8515625" width="128" height="105"/>
+    </elements>
 </model>
